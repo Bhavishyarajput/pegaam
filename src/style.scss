@@ -1,0 +1,599 @@
+@mixin mobile {
+    @media screen and (max-width: 600px) {
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  
+  @mixin laptop {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+  
+
+
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+    // height: 100%;
+    font-family:Nunito;
+    box-sizing: border-box;
+    // background-color: #111B21;
+  
+}
+
+.form-container{
+    // background-color: #e27396;
+    background-color: #111B21;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet {
+        max-width: 100%;
+        max-height: 100%;
+        // flex-wrap: wrap;
+    //    max-height: 100%;
+       }
+    
+    .formWrapper
+    {
+        // background-color:  white;
+        // background-color: #202C33;
+        background-color: #2A3942;
+        display: flex;
+        flex-direction: column;
+        padding:20px 40px;
+        border-radius:10px;
+        gap:10px;
+        align-items: center;
+        justify-content: center;
+
+        @include tablet {
+            max-width: 100%;
+            max-height: 100%;
+        //    max-height: 100%;
+           }
+        
+
+        .logo{
+            // color:#e27396;
+            // color: #AEBAC1;
+            color: #e27396;
+            font-weight:bold;
+            font-size:24px;
+            @include tablet {
+                width: 100%;
+                text-align: center;
+            //    max-height: 100%;
+               }
+            
+        }
+        .title{
+            // color:#e27396;
+            color: #AEBAC1;
+            font-size: 15px;
+            @include tablet {
+                max-width: 100%;
+               max-height: 100%;
+               }
+        }
+        input{
+            padding: 15px;
+            border: none;
+            width: 250px;
+            border-bottom: 1px solid #e27396;
+            &::placeholder{
+                color: rgb(226, 115, 150);
+            }
+            outline: none;
+            @include tablet {
+                max-width: 100%;
+               max-height: 100%;
+               }
+        
+            
+
+        }
+        label{
+            display: flex;
+            align-items: center;
+           
+            color:#e27396;
+            gap: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            @include mobile {
+                max-width: 100%;
+                max-height: 100%;
+               
+               }
+        img{
+            width: 40px;
+
+            
+            cursor: pointer;
+            @include tablet {
+                max-width: 100%;
+                max-height: 100%;
+               
+               }
+        }
+        }
+       
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            @include tablet {
+                max-width: 100%;
+                max-height: 100%;
+               
+               }
+          
+        }
+
+        button{
+            border: none;
+            padding: 5%;
+            background-color:  #e27396;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            @include tablet {
+                max-width: 100%;
+                max-height: 100%;
+               
+               }
+            
+            
+        }
+        p{
+            color: rgb(226, 115, 150);
+            font-size: 15px;
+            margin-top: 10px;
+            @include mobile {
+                max-width: 100%;
+                max-height: 100%;
+            //    flex-wrap: wrap;
+               }
+            
+        }
+
+    }
+
+
+//   @media (max-width:600px) {
+//     .form-container{
+//         max-width: 100px;
+//         max-height: 100px;
+       
+//     }
+//     .formWrapper{
+//         margin-bottom: 15px;
+//         // width: 100%;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//     }
+//     .title{
+//         width: 50%;
+//     }
+//   }
+
+
+    
+}
+
+.griding::-webkit-scrollbar {
+    width: 0.5rem; /* Adjust the width as needed */
+    background-color: transparent; 
+    display: none;
+
+  }
+
+.home{
+    background-color: #111B21;
+    height: 100vh;
+    
+    // align-items: center;
+    
+    border: black;
+
+    .inside-home{
+        display: flex;
+        justify-content: space-between;
+         border: 1px solid white;
+         border-radius: 10px;
+         width: 100%;
+         height: 100vh;
+            margin: auto;
+
+         display: flex;
+         overflow: hidden;
+       
+    }
+    .sidebar{
+        flex: 1;
+        background-color: #111B21;
+        border-right: 0.5px solid white; 
+       
+        // border-right: 1px solid #ff7477;
+        .navbar{
+            display: flex;
+            align-items: center;
+            background-color:#202C33;
+            height: 50px;
+            padding: 10px;
+            justify-content: space-between;
+            color: white;
+            // border-right: 0.5px solid white;            // border: 1px solid black;
+        }
+        .Logo{
+            font-weight: bold;
+            @include tablet {
+                display: none;
+              }
+            // color: white;
+        }
+        .right{
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            gap: 10px;
+            .imaging{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                object-fit: fit;
+            }
+            img{
+                background-color: white;
+                height: 35px;
+                width: 35px;
+                border-radius: 50%;
+                object-fit: cover; /* Use 'cover' instead of 'fill' */
+                
+            }
+            // button{
+            //     background-color: #e27396;
+            //     color: black;
+            //     font-size: 15px;
+            //     border: 1px solid black;
+            //     cursor: pointer;
+            //     border-radius: 5px;
+            //     padding: 7px;
+
+            // }
+            
+        }
+        // just below navbar css
+        .search{
+            border-bottom: 1px solid black;
+            
+        
+        .searchForm{
+            padding: 10px;
+            input{
+                background-color: transparent;
+                border: none;
+                color: white;
+                outline: none;
+                background-color: #202C33;
+                width: 100%;
+                border-radius: 15px;
+                border: 2px solid #202C33;
+                height: 40px;
+                
+            &::placeholder{
+                
+                padding-left: 1px;
+                // left: 34%;
+                color: #e27396;
+            }
+        }
+        }
+        
+    }
+    
+      
+      
+
+    
+        .userchat{
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            cursor: pointer;
+
+            &:hover{
+                background-color:#2A3942;
+            }
+            img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: white;
+                object-fit: fill;
+
+                
+            }
+        }
+        .chating{
+            
+            
+            span{
+                color: white;
+                font-size: 18px;
+                font-weight: 500;
+            }
+            p{
+                font-size: 14px;
+                color: gray;
+            }
+        }
+        
+        }
+        // chats css
+        // .userchating{
+        //     padding: 10px;
+        //     display: flex;
+        //     align-items: center;
+        //     gap: 10px;
+        //     color: white;
+        //     cursor: pointer;
+
+        //     &:hover{
+        //         background-color:#809bce;
+        //     }
+        //     img{
+        //         width: 50px;
+        //         height: 50px;
+        //         border-radius: 50%;
+        //     }
+
+        
+    }
+        
+    .chat{
+        flex: 2.5;
+        background-color: #0B141A;
+
+        // button{
+        //     background-color: #e27396;
+        //     color: black;
+        //     font-size: 15px;
+        //     border: 1px solid black;
+        //     cursor: pointer;
+        //     border-radius: 5px;
+        //     padding: 7px;
+
+        // }
+        .chatinfo{
+            height: 50px;
+            background-color: #202C33;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        // --helper: #363D42;
+        ::-webkit-scrollbar {
+            display: none; /* Width of the scrollbar */
+          }
+
+        //   ::-webkit-scrollbar-track{
+        //     // background-color: var(--helper);
+        //     background: #e27396;
+        //   }
+        //   ::-webkit-scrollbar-thumb{
+        //     background-color: #363D42;
+        //     border-radius: 1rem;
+        //     border:0.5rem solid transparent;
+        //     background-clip: content-box;
+        //   }
+        //   ::-webkit-scrollbar-thumb :hover{
+        //     background-color: #363D42;
+        //   }
+
+
+
+
+        button{
+            background-color: #AEBAC1;
+            color: black;
+            font-weight: bold;
+            font-size: 15px;
+            border: 1px solid black;
+            cursor: pointer;
+            border-radius: 5px;
+            padding: 7px;
+
+        }
+        .messages{
+            color: #DAEDEF;
+            background-color: #111B21;
+            padding: 10px;
+            scroll-behavior: smooth;
+        
+            height: calc(110% - 170px);
+            overflow: scroll;
+            overflow-x: hidden;
+            
+            .message{
+                display: flex;
+                gap: 10px;
+                margin-bottom: 20px;
+                
+                .messageInfo{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    color: #AEBAC1;
+                    font-weight: 300px;
+                    
+                    img{
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        object-fit: fill;
+                        background-color: white;
+                    }
+
+                    // yh likhte toh mtlb parent se reference liya hai toh baki chije likhni nhi pdti
+                    
+                }
+                .messageContent{
+                    max-width: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    color: black;
+                    font-weight: bold;
+                    
+                    p{
+                        background-color: #AEBAC1;
+                        padding: 10px 20px ;
+                        border-radius: 0px 10px 10px 10px;
+                        // max width utni rhegi jitna content hai
+                        max-width: max-content;
+                        // border-radius: 0px 10px 10px 10px;
+                        
+                    }
+                    img{
+                        // background-color: white;
+                        width: 30%;
+                        border-radius: 0px 10px 10px 10px;
+                    }
+
+                  
+                } 
+                &.owner{
+                    flex-direction: row-reverse;
+
+                    .messageContent{
+
+                    align-items: flex-end;
+
+                
+                p{
+                    background-color: #e27396;
+                    color: black;
+                    border-radius: 10px 0px 10px 10px;
+                }
+                img{
+                    // background-color: white;
+                    width: 30%;
+                    border-radius: 10px 0px 10px 0px;
+                }
+            }
+            }
+                    
+            }
+        }
+
+        .imputing{
+            display: flex;
+            justify-content: space-between;
+            margin: 7px;
+            // padding: 5px;
+            // align-items: center;
+            .texting{
+                width: 87%;
+                border-radius: 20px;
+                border: none;
+                color:#E0E1E3;
+                background-color:#202C33;          
+                &::placeholder{
+                
+                    padding-left: 2px;
+                    // left: 34.5px;
+                    color:  #e27396;
+                }
+               
+            }
+            .butting{
+                border-radius: 12px;
+                width: 65px;
+                background-color: #e27396;
+                color: black;
+            }
+        }
+
+    }
+    .eyebutton {
+        display: flex;
+        align-items: center;
+        position: relative; /* Add position relative to enable absolute positioning of the eye icon */
+      }
+      
+      .eyebutton input[type='password'] {
+        padding-right: 30px; /* Adjust the padding to create space for the eye icon */
+      }
+      
+      .eyebutton img {
+        position: absolute;
+        right: 5px; /* Adjust the right position as needed */
+        top: 50%;
+        transform: translateY(-50%);
+        width: 25px;
+        cursor: pointer;
+      }
+    //   imput.jsx
+    .send {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        
+        img {
+          height: 24px;
+          cursor: pointer;
+        }
+        .sending{
+            display: flex;
+        }
+
+        button {
+          border: none;
+          padding: 10px 15px;
+          color: white;
+          background-color: #8da4f1;
+          cursor: pointer;
+        }
+    }
+
+// reset password
+      
+    //   @media (max-width: 584px) {
+    //     .form-container {
+    //       max-width: 100%;
+         
+    //     }
+        
+    //     .formWrapper {
+    //       margin-bottom: 5px;
+    //       max-width: 100%;
+    //     }
+    //   }
+
+.nouser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    flex-direction: column;
+
+}
